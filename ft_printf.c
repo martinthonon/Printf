@@ -11,7 +11,7 @@ int ft_printf(const char *str, ...)
 	{
 		if (*str == '%')
 		{
-			if (ft_strchr("cspdiuxX%", *(str + 1)))
+			//if (ft_strchr("cspdiuxX%", *(str + 1)))
 				len += ft_types(*(str + 1), args);
 		}
 		else

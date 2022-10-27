@@ -10,4 +10,6 @@ int ft_types(const char types, va_list args)
 		return (ft_putstr());
 	else if (types == 'd' || types == 'i' || types == 'u')
 		return (ft_putnbr());
+	else
+		return (0);
 }
