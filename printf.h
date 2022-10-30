@@ -2,10 +2,28 @@
 # define PRINTF_H
 
 # include <stdarg.h>
-# include <unistd.h>
+# include <limits.h>
+
+# define FORMATS "cspdiuxX%"
+
+typedef struct s_flags
+{
+    int zero;
+    int is_zero;
+    int sign;
+    int sharp;
+    int space;
+    int dot;
+    int precision;
+    int percent;
+    int dash;
+
+}               t_flags;
+
 
 char *ft_strchr(const char *str, int c);
 int ft_printf(const char *str, ...);
-int ft_types(const char types, va_list args);
+int ft_formats(const char types, va_list args);
+t_flags *ft_init(t_flags *tab);
 
 #endif
