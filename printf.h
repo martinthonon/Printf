@@ -28,7 +28,7 @@ typedef enum	e_bool
 
 char *ft_strchr(const char *str, int c);
 int ft_printf(const char *str, ...);
-int ft_formats(const char *types, va_list args);
+int ft_formats(const char *types, int index, va_list args);
 t_flags *ft_init(t_flags *tab);
 
 #endif

@@ -5,35 +5,30 @@ t_flags *ft_init(t_flags *tab)
     tab->zero = false; //ok
 	tab->sign = false; //ok
     tab->sharp = false; //ok
-    tab->space = false;
-    tab->dot = false;
-    tab->dash = false;
-	tab->width = false;
-	tab->precision = false;
+    tab->space = false; //ok
+    tab->dot = false; //ok
+    tab->dash = false; //ok
+	tab->width = false; //ok
+	tab->precision = false; //ok
     return (tab);
 }
 
-int ft_printf(const char *str, ...)
+int ft_printf(const char *formats, ...)
 {
-	const char *s;
+	int i;
 	int len;
 	va_list args;
 
-	s = str;
+	i = 0;
 	len = 0;
-	va_start(args, str);
-	while (*s)
+	va_start(args, formats);
+	while (formats[i])
 	{
-		if (*s == '%')
-		{
-			//if (ft_strchr("cspdiuxX%", *(str + 1)))
-				len += ft_formats(str, args);
-            //else
-                //ft_putchar(*str);
-		}
+		if (formats[i] == '%')
+				len += ft_formats(formats, i + 1, args);
 		else
 			len += ft_putchar(*s);
-		++s;
+		++i;
 	}
 	return (len);
 }
