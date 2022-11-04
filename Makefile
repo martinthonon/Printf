@@ -1,4 +1,5 @@
-SRCS	= ft_printf.c ft_types.c ft_utils.c
+SRCS	=	printf.c utils.c integer.c \
+			hexa.c string.c
 
 OBJS	= ${SRCS:.c=.o}
 
