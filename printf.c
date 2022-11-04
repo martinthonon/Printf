@@ -31,17 +31,16 @@ int ft_printf(const char *formats, ...)
 	{
 		if (*formats == '%')
 		{
-			if (ft_strchr(FORMATS, *(formats + 1)))
+			++formats;
+			if (ft_strchr(FORMATS, *formats))
 			{
-				len += ft_parse(*(formats + 1), args);
-				++formats;
+				len += ft_parse(*formats, args);
+
 			}
 			else
-			{
 				++formats;
 				len += ft_putchar(*formats);
 				//return (0);
-			}
 		}
 		else
 			len += ft_putchar(*formats);
