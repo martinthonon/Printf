@@ -1,9 +1,8 @@
-SRCS	=	printf.c utils.c integer.c \
-			hexa.c string.c
+SRCS	=	ft_printf.c ft_utils.c ft_integer.c
 
 OBJS	= ${SRCS:.c=.o}
 
-NAME	= libfprintf.a
+NAME	= libftprintf.a
 
 CC		= gcc
 
