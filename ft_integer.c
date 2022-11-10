@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_integer.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mathonon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/10 11:00:30 by mathonon          #+#    #+#             */
+/*   Updated: 2022/11/10 11:03:01 by mathonon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_putnbr(int i)
+int	ft_putnbr(int i)
 {
-	int len;
-	unsigned int nb;
+	int				len;
+	unsigned int	nb;
 
 	len = 0;
 	nb = i;
@@ -24,7 +36,7 @@ int ft_putnbr(int i)
 
 int	ft_putbase(const char *formats, unsigned int base, size_t ui)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (ui > base - 1)

@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mathonon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/10 11:06:28 by mathonon          #+#    #+#             */
+/*   Updated: 2022/11/10 11:07:21 by mathonon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdlib.h>
 
 # define FORMATS "cspdiuxX%"
 # define MAX_HEX "0123456789ABCDEF"
