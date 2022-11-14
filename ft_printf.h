@@ -25,7 +25,7 @@ int		ft_printf(const char *formats, ...);
 int		ft_putchar(const char c);
 int		ft_putstr(const char *str);
 int		ft_strlen(const char *str);
-int		ft_putnbr(int n);
+int		ft_putnbr(int i);
 int		ft_putbase(const char *formats, unsigned int base, size_t ui);
 
 #endif
