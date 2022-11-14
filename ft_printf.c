@@ -43,11 +43,9 @@ int	ft_printf(const char *formats, ...)
 	{
 		if (*formats == '%')
 		{
-			if (ft_strchr(FORMATS, *(formats + 1)))
-			{
-				++formats;
+			++formats;
+			if (ft_strchr(FORMATS, *formats))
 				len += ft_parse(*formats, ap);
-			}
 			else
 				len += ft_putchar(*formats);
 		}
